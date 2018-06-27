@@ -1,0 +1,39 @@
+```{r}
+setwd("~/Desktop")
+c <- read.csv("~/Desktop/Bank.csv", header=TRUE,sep=",")
+library(car)
+summary(c)
+c
+str(c)
+sapply(c[2:13],sd)
+head(c)
+tail(c)
+plot(c)
+plot(c$age)
+plot(c$Dependents)
+plot(c$DebtRatio)
+hist(c$age)
+hist(c$DebtRatio)
+hist(c$RevolvingUtilizationOfUnsecuredLines)
+hist(c$MonthlyIncome)
+hist(c$OpenCreditLinesAndLoans)
+hist(c$RealEstateLoansOrLines)
+hist(c$TotalCeditLines)
+hist(c$X30.59DaysPastDueNotWorse)
+hist(c$X60.89DaysPastDueNotWorse)
+plot(c$MonthlyIncome,c$age)
+plot(c$age,c$DebtRatio)
+plot(c$MonthlyIncome,c$DebtRatio)
+plot(c$age,c$RevolvingUtilizationOfUnsecuredLines)
+plot(c$TotalCeditLines,c$age)
+plot(c$X30.59DaysPastDueNotWorse,c$age)
+
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
